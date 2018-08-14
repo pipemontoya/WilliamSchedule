@@ -8,26 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		485C25C72DDE8ED8FFEAADAA /* Pods_WilliamSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F569B465B73D496314070DD0 /* Pods_WilliamSchedule.framework */; };
-		691B99BD212279020099B30A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 691B99BC212279020099B30A /* GoogleService-Info.plist */; };
-		692B8BC0212271E500E25461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B8BBF212271E500E25461 /* AppDelegate.swift */; };
-		692B8BC2212271E500E25461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B8BC1212271E500E25461 /* ViewController.swift */; };
-		692B8BC5212271E500E25461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B8BC3212271E500E25461 /* Main.storyboard */; };
-		692B8BC8212271E500E25461 /* WilliamSchedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 692B8BC6212271E500E25461 /* WilliamSchedule.xcdatamodeld */; };
-		692B8BCA212271E600E25461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692B8BC9212271E600E25461 /* Assets.xcassets */; };
+		691B99C521227C3F0099B30A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691B99C121227C3E0099B30A /* Assets.xcassets */; };
+		691B99C621227C3F0099B30A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 691B99C221227C3E0099B30A /* GoogleService-Info.plist */; };
+		691B99C721227C3F0099B30A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99C321227C3E0099B30A /* AppDelegate.swift */; };
+		691B99C821227C3F0099B30A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 691B99C421227C3E0099B30A /* Info.plist */; };
+		691B99CF2122881B0099B30A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691B99CE2122881B0099B30A /* Login.storyboard */; };
+		691B99D2212289CF0099B30A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99D1212289CF0099B30A /* AuthService.swift */; };
+		691B99D621228AA10099B30A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691B99D521228AA10099B30A /* Main.storyboard */; };
 		692B8BCD212271E600E25461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B8BCB212271E600E25461 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FE877F8A16A6BF6BB7A9E24 /* Pods-WilliamSchedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamSchedule.release.xcconfig"; path = "Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule.release.xcconfig"; sourceTree = "<group>"; };
-		691B99BC212279020099B30A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		691B99C121227C3E0099B30A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		691B99C221227C3E0099B30A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		691B99C321227C3E0099B30A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		691B99C421227C3E0099B30A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		691B99CE2122881B0099B30A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		691B99D1212289CF0099B30A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		691B99D521228AA10099B30A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		692B8BBC212271E500E25461 /* WilliamSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilliamSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		692B8BBF212271E500E25461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		692B8BC1212271E500E25461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		692B8BC4212271E500E25461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		692B8BC7212271E500E25461 /* WilliamSchedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WilliamSchedule.xcdatamodel; sourceTree = "<group>"; };
-		692B8BC9212271E600E25461 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		692B8BCC212271E600E25461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		692B8BCE212271E600E25461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78FCECF0ACCDD9FC4D24E5FC /* Pods-WilliamSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamSchedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		F569B465B73D496314070DD0 /* Pods_WilliamSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WilliamSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,6 +62,58 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		691B99C021227C3E0099B30A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				691B99C221227C3E0099B30A /* GoogleService-Info.plist */,
+				692B8BCB212271E600E25461 /* LaunchScreen.storyboard */,
+				691B99C321227C3E0099B30A /* AppDelegate.swift */,
+				691B99C421227C3E0099B30A /* Info.plist */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		691B99C92122873A0099B30A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				691B99D421228A730099B30A /* Main */,
+				691B99CA2122876E0099B30A /* Login */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		691B99CA2122876E0099B30A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				691B99CE2122881B0099B30A /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		691B99CD212287F10099B30A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				691B99C121227C3E0099B30A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		691B99D0212289AF0099B30A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				691B99D1212289CF0099B30A /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		691B99D421228A730099B30A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				691B99D521228AA10099B30A /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		692B8BB3212271E500E25461 = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +135,10 @@
 		692B8BBE212271E500E25461 /* WilliamSchedule */ = {
 			isa = PBXGroup;
 			children = (
-				692B8BBF212271E500E25461 /* AppDelegate.swift */,
-				692B8BC1212271E500E25461 /* ViewController.swift */,
-				692B8BC3212271E500E25461 /* Main.storyboard */,
-				692B8BC9212271E600E25461 /* Assets.xcassets */,
-				692B8BCB212271E600E25461 /* LaunchScreen.storyboard */,
-				692B8BCE212271E600E25461 /* Info.plist */,
-				691B99BC212279020099B30A /* GoogleService-Info.plist */,
-				692B8BC6212271E500E25461 /* WilliamSchedule.xcdatamodeld */,
+				691B99D0212289AF0099B30A /* Service */,
+				691B99CD212287F10099B30A /* Resources */,
+				691B99C92122873A0099B30A /* Application */,
+				691B99C021227C3E0099B30A /* Base */,
 			);
 			path = WilliamSchedule;
 			sourceTree = "<group>";
@@ -155,9 +204,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				692B8BCD212271E600E25461 /* LaunchScreen.storyboard in Resources */,
-				691B99BD212279020099B30A /* GoogleService-Info.plist in Resources */,
-				692B8BCA212271E600E25461 /* Assets.xcassets in Resources */,
-				692B8BC5212271E500E25461 /* Main.storyboard in Resources */,
+				691B99C621227C3F0099B30A /* GoogleService-Info.plist in Resources */,
+				691B99C521227C3F0099B30A /* Assets.xcassets in Resources */,
+				691B99D621228AA10099B30A /* Main.storyboard in Resources */,
+				691B99CF2122881B0099B30A /* Login.storyboard in Resources */,
+				691B99C821227C3F0099B30A /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,12 +222,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,23 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				692B8BC8212271E500E25461 /* WilliamSchedule.xcdatamodeld in Sources */,
-				692B8BC2212271E500E25461 /* ViewController.swift in Sources */,
-				692B8BC0212271E500E25461 /* AppDelegate.swift in Sources */,
+				691B99C721227C3F0099B30A /* AppDelegate.swift in Sources */,
+				691B99D2212289CF0099B30A /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		692B8BC3212271E500E25461 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				692B8BC4212271E500E25461 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		692B8BCB212271E600E25461 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,8 +407,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = WilliamSchedule/Info.plist;
+				DEVELOPMENT_TEAM = 69RRCEKXZC;
+				INFOPLIST_FILE = "$(SRCROOT)/WilliamSchedule/Base/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,7 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Williams.WilliamSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -376,8 +426,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = WilliamSchedule/Info.plist;
+				DEVELOPMENT_TEAM = 69RRCEKXZC;
+				INFOPLIST_FILE = "$(SRCROOT)/WilliamSchedule/Base/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,7 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Williams.WilliamSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -411,19 +461,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		692B8BC6212271E500E25461 /* WilliamSchedule.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				692B8BC7212271E500E25461 /* WilliamSchedule.xcdatamodel */,
-			);
-			currentVersion = 692B8BC7212271E500E25461 /* WilliamSchedule.xcdatamodel */;
-			path = WilliamSchedule.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 692B8BB4212271E500E25461 /* Project object */;
 }
