@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>581790271801-1snra5jhl05apu11nr5d1lv2uiv6dtp0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.581790271801-1snra5jhl05apu11nr5d1lv2uiv6dtp0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDxb01hN0qF-UdnZ9OSEXTlaR3AldH0m5M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>581790271801</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Williams.WilliamSchedule</string>
+	<key>PROJECT_ID</key>
+	<string>williamschedule-e51aa</string>
+	<key>STORAGE_BUCKET</key>
+	<string>williamschedule-e51aa.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:581790271801:ios:5b7f68f123969a49</string>
+	<key>DATABASE_URL</key>
+	<string>https://williamschedule-e51aa.firebaseio.com</string>
+</dict>
+</plist>

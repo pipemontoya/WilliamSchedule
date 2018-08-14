@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		485C25C72DDE8ED8FFEAADAA /* Pods_WilliamSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F569B465B73D496314070DD0 /* Pods_WilliamSchedule.framework */; };
+		691B99BD212279020099B30A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 691B99BC212279020099B30A /* GoogleService-Info.plist */; };
 		692B8BC0212271E500E25461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B8BBF212271E500E25461 /* AppDelegate.swift */; };
 		692B8BC2212271E500E25461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B8BC1212271E500E25461 /* ViewController.swift */; };
 		692B8BC5212271E500E25461 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B8BC3212271E500E25461 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		0FE877F8A16A6BF6BB7A9E24 /* Pods-WilliamSchedule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamSchedule.release.xcconfig"; path = "Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule.release.xcconfig"; sourceTree = "<group>"; };
+		691B99BC212279020099B30A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		692B8BBC212271E500E25461 /* WilliamSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilliamSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		692B8BBF212271E500E25461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		692B8BC1212271E500E25461 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				692B8BC9212271E600E25461 /* Assets.xcassets */,
 				692B8BCB212271E600E25461 /* LaunchScreen.storyboard */,
 				692B8BCE212271E600E25461 /* Info.plist */,
+				691B99BC212279020099B30A /* GoogleService-Info.plist */,
 				692B8BC6212271E500E25461 /* WilliamSchedule.xcdatamodeld */,
 			);
 			path = WilliamSchedule;
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				692B8BCD212271E600E25461 /* LaunchScreen.storyboard in Resources */,
+				691B99BD212279020099B30A /* GoogleService-Info.plist in Resources */,
 				692B8BCA212271E600E25461 /* Assets.xcassets in Resources */,
 				692B8BC5212271E500E25461 /* Main.storyboard in Resources */,
 			);
@@ -355,7 +359,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WilliamSchedule/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Williams.WilliamSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -371,7 +378,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WilliamSchedule/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Williams.WilliamSchedule;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
