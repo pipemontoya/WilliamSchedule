@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
+        FirebaseApp.configure()
+        startStoryboard()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
@@ -53,11 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     private func startStoryboard() {
         let auth = AuthService.shared
-        guard auth.isLogged else {
-            window?.rootViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()
-            return
-        }
-        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        let name = auth.isLogged ? "Main" : "Login"
+        window?.rootViewController = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
     }
 }
