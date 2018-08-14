@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MedicalApoinmentViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class MedicalApoinmentViewController: UIViewController {
     @IBOutlet weak var patient: UITextField!
     @IBOutlet weak var dateField: UITextField!
     @IBOutlet weak var HourField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,10 @@ class MedicalApoinmentViewController: UIViewController {
     }
     
     @IBAction func scheduleApoinment(_ sender: UIButton) {
-        
+        ScheduleApoinmentViewModel.createApoinment(
+            patientName: patient.text ?? "",
+            date: dateField.text ?? "",
+            hour: HourField.text ?? "",
+            docType: .apointment)
     }
 }

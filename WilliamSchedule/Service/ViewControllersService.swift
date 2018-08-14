@@ -13,6 +13,7 @@ enum SuscribeViewControllers: String {
     case patients = "Patients"
     case medicalApoinment = "MedicalApoinment"
     case profile = "Profile"
+    case schedule = "Schedule"
 }
 
 class ViewControllersService {

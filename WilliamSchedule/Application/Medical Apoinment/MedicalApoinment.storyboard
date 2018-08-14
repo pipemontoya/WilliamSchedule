@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Medical Apoinment-->
+        <!--Apoinment-->
         <scene sceneID="nrG-uW-XRY">
             <objects>
                 <viewController id="Z9x-7e-fMP" customClass="MedicalApoinmentViewController" customModule="WilliamSchedule" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n0R-l8-1dP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Medical Apoinment" id="heY-oN-ZGN"/>
+                    <tabBarItem key="tabBarItem" title="Apoinment" id="heY-oN-ZGN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="HourField" destination="tco-AB-wTW" id="uHl-dq-rdI"/>

@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         let loginButton = FBSDKLoginButton()
         loginButton.delegate = self
+        loginButton.readPermissions = ["public_profile", "email"]
         view.addSubview(loginButton)
         loginButton.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1).isActive = true
         loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
