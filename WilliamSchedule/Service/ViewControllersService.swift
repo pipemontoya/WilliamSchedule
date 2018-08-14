@@ -12,6 +12,7 @@ import UIKit
 enum SuscribeViewControllers: String {
     case patients = "Patients"
     case medicalApoinment = "MedicalApoinment"
+    case profile = "Profile"
 }
 
 class ViewControllersService {

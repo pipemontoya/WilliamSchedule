@@ -13,7 +13,7 @@ class MainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewControllers = ViewControllersService.viewcontrollers(views: [.patients, .medicalApoinment])
+        viewControllers = ViewControllersService.viewcontrollers(views: [.patients, .medicalApoinment, .profile])
     }
 
 }
