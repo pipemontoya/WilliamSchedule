@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
-    private func startStoryboard() {
+    public func startStoryboard() {
         let auth = AuthService.shared
         let name = auth.isLogged ? "Main" : "Login"
         window?.rootViewController = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()

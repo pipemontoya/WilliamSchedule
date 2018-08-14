@@ -16,6 +16,10 @@
 		691B99D2212289CF0099B30A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99D1212289CF0099B30A /* AuthService.swift */; };
 		691B99D621228AA10099B30A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691B99D521228AA10099B30A /* Main.storyboard */; };
 		691B99D82122918D0099B30A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99D72122918D0099B30A /* LoginViewController.swift */; };
+		691B99DB21232E350099B30A /* Patients.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691B99DA21232E350099B30A /* Patients.storyboard */; };
+		691B99DD21232ED30099B30A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99DC21232ED30099B30A /* MainTabBarViewController.swift */; };
+		691B99E0212339B80099B30A /* MedicalApoinment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691B99DF212339B80099B30A /* MedicalApoinment.storyboard */; };
+		691B99E221233AC10099B30A /* ViewControllersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99E121233AC10099B30A /* ViewControllersService.swift */; };
 		692B8BCD212271E600E25461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B8BCB212271E600E25461 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,10 @@
 		691B99D1212289CF0099B30A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		691B99D521228AA10099B30A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		691B99D72122918D0099B30A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		691B99DA21232E350099B30A /* Patients.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Patients.storyboard; sourceTree = "<group>"; };
+		691B99DC21232ED30099B30A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		691B99DF212339B80099B30A /* MedicalApoinment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MedicalApoinment.storyboard; sourceTree = "<group>"; };
+		691B99E121233AC10099B30A /* ViewControllersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersService.swift; sourceTree = "<group>"; };
 		692B8BBC212271E500E25461 /* WilliamSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilliamSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		692B8BCC212271E600E25461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78FCECF0ACCDD9FC4D24E5FC /* Pods-WilliamSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamSchedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +86,9 @@
 		691B99C92122873A0099B30A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				691B99E321233E340099B30A /* Profile */,
+				691B99DE2123399B0099B30A /* Medical Apoinment */,
+				691B99D921232E030099B30A /* Patients */,
 				691B99D421228A730099B30A /* Main */,
 				691B99CA2122876E0099B30A /* Login */,
 			);
@@ -105,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				691B99D1212289CF0099B30A /* AuthService.swift */,
+				691B99E121233AC10099B30A /* ViewControllersService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -113,8 +125,32 @@
 			isa = PBXGroup;
 			children = (
 				691B99D521228AA10099B30A /* Main.storyboard */,
+				691B99DC21232ED30099B30A /* MainTabBarViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		691B99D921232E030099B30A /* Patients */ = {
+			isa = PBXGroup;
+			children = (
+				691B99DA21232E350099B30A /* Patients.storyboard */,
+			);
+			path = Patients;
+			sourceTree = "<group>";
+		};
+		691B99DE2123399B0099B30A /* Medical Apoinment */ = {
+			isa = PBXGroup;
+			children = (
+				691B99DF212339B80099B30A /* MedicalApoinment.storyboard */,
+			);
+			path = "Medical Apoinment";
+			sourceTree = "<group>";
+		};
+		691B99E321233E340099B30A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		692B8BB3212271E500E25461 = {
@@ -208,7 +244,9 @@
 			files = (
 				692B8BCD212271E600E25461 /* LaunchScreen.storyboard in Resources */,
 				691B99C621227C3F0099B30A /* GoogleService-Info.plist in Resources */,
+				691B99DB21232E350099B30A /* Patients.storyboard in Resources */,
 				691B99C521227C3F0099B30A /* Assets.xcassets in Resources */,
+				691B99E0212339B80099B30A /* MedicalApoinment.storyboard in Resources */,
 				691B99D621228AA10099B30A /* Main.storyboard in Resources */,
 				691B99CF2122881B0099B30A /* Login.storyboard in Resources */,
 				691B99C821227C3F0099B30A /* Info.plist in Resources */,
@@ -226,19 +264,33 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +323,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691B99E221233AC10099B30A /* ViewControllersService.swift in Sources */,
 				691B99D82122918D0099B30A /* LoginViewController.swift in Sources */,
+				691B99DD21232ED30099B30A /* MainTabBarViewController.swift in Sources */,
 				691B99C721227C3F0099B30A /* AppDelegate.swift in Sources */,
 				691B99D2212289CF0099B30A /* AuthService.swift in Sources */,
 			);

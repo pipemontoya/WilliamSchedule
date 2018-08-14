@@ -17,8 +17,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         let loginButton = FBSDKLoginButton()
         loginButton.delegate = self
-        loginButton.center = view.center
         view.addSubview(loginButton)
+        loginButton.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1).isActive = true
+        loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100.0).isActive = true
+        loginButton.translatesAutoresizingMaskIntoConstraints = false
     }
 
 }
@@ -33,7 +36,9 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
             guard let user = user else {return}
-            print(user.user.displayName)
+            let appdelegate = UIApplication.shared.delegate as! AppDelegate
+            appdelegate.startStoryboard()
+            print(user)
         }
     }
     
