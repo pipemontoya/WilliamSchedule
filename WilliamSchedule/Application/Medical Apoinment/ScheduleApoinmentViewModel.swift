@@ -11,6 +11,7 @@ import Firebase
 
 enum Doc: String {
     case apointment = "Apoinments"
+    case consultant = "Consultants"
 }
 
 class ScheduleApoinmentViewModel: NSObject {
@@ -21,7 +22,7 @@ class ScheduleApoinmentViewModel: NSObject {
         addApoinment(data: apoinment, doc: docType)
     }
     
-    static func addApoinment(data: [String: Any], doc: Doc) {
+    private static func addApoinment(data: [String: Any], doc: Doc) {
         var ref: DocumentReference? = nil
         ref = db.collection(doc.rawValue).addDocument(data: data, completion: { (err) in
             if let err = err {

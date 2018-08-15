@@ -21,12 +21,9 @@ class MedicalApoinmentViewController: UIViewController {
         super.viewDidLoad()
     
     }
-
-    @IBAction func apoinmentType(_ sender: UISwitch) {
-        
-    }
     
     @IBAction func scheduleApoinment(_ sender: UIButton) {
+        
         ScheduleApoinmentViewModel.createApoinment(
             patientName: patient.text ?? "",
             date: dateField.text ?? "",

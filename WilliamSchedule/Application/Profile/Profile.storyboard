@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" red="0.67451404770000001" green="0.82219933069999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FE5-n9-fs4">
-                                <rect key="frame" x="48" y="509" width="279" height="45"/>
+                                <rect key="frame" x="48" y="525" width="279" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.1176452637" blue="0.1215667725" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="AFF-lw-dCx"/>
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bo-vH-dmD">
-                                <rect key="frame" x="48" y="190" width="279" height="255"/>
+                                <rect key="frame" x="48" y="206" width="279" height="255"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="255" id="h7U-Hz-usH"/>
@@ -57,7 +57,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-td-QvK">
-                                <rect key="frame" x="127.5" y="130" width="120" height="120"/>
+                                <rect key="frame" x="127.5" y="146" width="120" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_photo" translatesAutoresizingMaskIntoConstraints="NO" id="7iD-50-odX">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -102,7 +102,7 @@
                             <constraint firstItem="FE5-n9-fs4" firstAttribute="top" secondItem="8bo-vH-dmD" secondAttribute="bottom" constant="64" id="pOJ-ge-k3j"/>
                             <constraint firstItem="FE5-n9-fs4" firstAttribute="leading" secondItem="Rnw-5b-lJr" secondAttribute="leading" constant="48" id="qU4-A5-A6q"/>
                             <constraint firstItem="Ibb-td-QvK" firstAttribute="top" secondItem="8bo-vH-dmD" secondAttribute="top" constant="-60" id="zag-cw-ic2"/>
-                            <constraint firstItem="Rnw-5b-lJr" firstAttribute="bottom" secondItem="FE5-n9-fs4" secondAttribute="bottom" constant="64" id="zfZ-qM-0m9"/>
+                            <constraint firstItem="Rnw-5b-lJr" firstAttribute="bottom" secondItem="FE5-n9-fs4" secondAttribute="bottom" constant="48" id="zfZ-qM-0m9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rnw-5b-lJr"/>
                     </view>
