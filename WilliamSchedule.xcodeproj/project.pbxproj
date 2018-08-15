@@ -27,6 +27,8 @@
 		691B99F0212384670099B30A /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691B99EF212384670099B30A /* Schedule.storyboard */; };
 		691B99F2212389D40099B30A /* ScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99F1212389D40099B30A /* ScheduleTableViewController.swift */; };
 		691B99F421238A040099B30A /* ScheduleModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99F321238A040099B30A /* ScheduleModelView.swift */; };
+		691B99F6212399160099B30A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99F5212399160099B30A /* ScheduleTableViewCell.swift */; };
+		691B99F92123D5A50099B30A /* Apoinment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691B99F82123D5A50099B30A /* Apoinment.swift */; };
 		692B8BCD212271E600E25461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B8BCB212271E600E25461 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		691B99EF212384670099B30A /* Schedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
 		691B99F1212389D40099B30A /* ScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewController.swift; sourceTree = "<group>"; };
 		691B99F321238A040099B30A /* ScheduleModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModelView.swift; sourceTree = "<group>"; };
+		691B99F5212399160099B30A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		691B99F82123D5A50099B30A /* Apoinment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apoinment.swift; sourceTree = "<group>"; };
 		692B8BBC212271E500E25461 /* WilliamSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilliamSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		692B8BCC212271E600E25461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78FCECF0ACCDD9FC4D24E5FC /* Pods-WilliamSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamSchedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,8 +182,17 @@
 				691B99EF212384670099B30A /* Schedule.storyboard */,
 				691B99F1212389D40099B30A /* ScheduleTableViewController.swift */,
 				691B99F321238A040099B30A /* ScheduleModelView.swift */,
+				691B99F5212399160099B30A /* ScheduleTableViewCell.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		691B99F72123D5850099B30A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				691B99F82123D5A50099B30A /* Apoinment.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		692B8BB3212271E500E25461 = {
@@ -203,6 +216,7 @@
 		692B8BBE212271E500E25461 /* WilliamSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				691B99F72123D5850099B30A /* Models */,
 				691B99D0212289AF0099B30A /* Service */,
 				691B99CD212287F10099B30A /* Resources */,
 				691B99C92122873A0099B30A /* Application */,
@@ -356,8 +370,10 @@
 			files = (
 				691B99F2212389D40099B30A /* ScheduleTableViewController.swift in Sources */,
 				691B99E92123467D0099B30A /* ProfileViewController.swift in Sources */,
+				691B99F6212399160099B30A /* ScheduleTableViewCell.swift in Sources */,
 				691B99E221233AC10099B30A /* ViewControllersService.swift in Sources */,
 				691B99EB212359D40099B30A /* MedicalApoinmentViewController.swift in Sources */,
+				691B99F92123D5A50099B30A /* Apoinment.swift in Sources */,
 				691B99D82122918D0099B30A /* LoginViewController.swift in Sources */,
 				691B99F421238A040099B30A /* ScheduleModelView.swift in Sources */,
 				691B99DD21232ED30099B30A /* MainTabBarViewController.swift in Sources */,

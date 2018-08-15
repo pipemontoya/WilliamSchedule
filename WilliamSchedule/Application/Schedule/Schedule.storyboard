@@ -18,13 +18,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qf3-iI-oaQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="schedule" rowHeight="110" id="qf3-iI-oaQ" customClass="ScheduleTableViewCell" customModule="WilliamSchedule" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qf3-iI-oaQ" id="fUp-Xo-ee8">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andres Felipe Montoya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPN-s5-ICW">
+                                            <rect key="frame" x="16" y="16" width="188" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Martes, 14 Agosto, 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtB-KI-AKV">
+                                            <rect key="frame" x="16" y="45" width="183" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 - 10:15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olo-bD-naI">
+                                            <rect key="frame" x="16" y="74" width="100" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="lPN-s5-ICW" secondAttribute="trailing" constant="171" id="Av4-AO-Su8"/>
+                                        <constraint firstItem="lPN-s5-ICW" firstAttribute="leading" secondItem="fUp-Xo-ee8" secondAttribute="leading" constant="16" id="GFp-KP-86Q"/>
+                                        <constraint firstItem="EtB-KI-AKV" firstAttribute="top" secondItem="lPN-s5-ICW" secondAttribute="bottom" constant="8" id="VLm-3j-jK0"/>
+                                        <constraint firstItem="lPN-s5-ICW" firstAttribute="top" secondItem="fUp-Xo-ee8" secondAttribute="top" constant="16" id="cZc-XF-dTz"/>
+                                        <constraint firstItem="olo-bD-naI" firstAttribute="top" secondItem="EtB-KI-AKV" secondAttribute="bottom" constant="8" id="ecQ-e8-70i"/>
+                                        <constraint firstItem="olo-bD-naI" firstAttribute="leading" secondItem="fUp-Xo-ee8" secondAttribute="leading" constant="16" id="fNK-HP-T3t"/>
+                                        <constraint firstItem="EtB-KI-AKV" firstAttribute="leading" secondItem="fUp-Xo-ee8" secondAttribute="leading" constant="16" id="hLW-QV-5zt"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="consultant" destination="lPN-s5-ICW" id="AfF-Gg-OpJ"/>
+                                    <outlet property="dateLabel" destination="EtB-KI-AKV" id="9zU-1D-JZr"/>
+                                    <outlet property="hourLabel" destination="olo-bD-naI" id="dGF-gT-5HJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,7 +71,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQU-xD-8FM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="110"/>
+            <point key="canvasLocation" x="61.600000000000001" y="109.29535232383809"/>
         </scene>
     </scenes>
 </document>

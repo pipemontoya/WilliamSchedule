@@ -10,13 +10,14 @@ import Foundation
 import Firebase
 
 protocol ScheduleDelegate: class {
-    func countDocuments(count: Int)
+    func countDocuments(count: Int, apoinments: [Apoinment])
 }
 
 class ScheduleModelView: NSObject {
     static weak var delegate: ScheduleDelegate? = nil
     static let db = Firestore.firestore()
     static var count = 0
+    static var apoinments: [Apoinment] = []
     
     private static func setupdb() {
         let settings = db.settings
@@ -30,11 +31,18 @@ class ScheduleModelView: NSObject {
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                delegate?.countDocuments(count: querySnapshot?.documents.count ?? 0)
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                var apoinments: [Apoinment] = []
+                for document in querySnapshot!.documents where document.data().count == 3 {
+                    apoinments.append(Apoinment(dictionary: document.data()))
                 }
+                self.apoinments = apoinments
+                delegate?.countDocuments(count: querySnapshot?.documents.count ?? 0, apoinments: apoinments)
             }
         }
     }
+    
+    static func apoinment() {
+        
+    }
+    
 }
