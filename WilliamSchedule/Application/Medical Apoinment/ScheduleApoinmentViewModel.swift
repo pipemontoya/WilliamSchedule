@@ -38,26 +38,56 @@ class ScheduleApoinmentViewModel: NSObject {
         })
     }
     
-    private static func validateDateHour(doc: Doc, date: String, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String) -> ())?) {
+    private static func validateDateHour(doc: Doc,apoinmentType: String, date: String, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String) -> ())?) {
         db.collection(doc.rawValue).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                for document in querySnapshot!.documents where (document.data()["date"] as? String == date ) {
-                    viewController.alert(title: "Lo sentimos!", message: "Ya existe una cita agendada a esta hora")
-                    delegate?.validSchedule(isvalid: false, date: date)
-                    handler?(false, date)
-                    return
+                for document in querySnapshot!.documents {
+                    let isValidated = validatehour(dictionary: document.data(), apoinmentType, vc: viewController, actualDateString: date)
+                    delegate?.validSchedule(isvalid: isValidated, date: date)
+                    handler?(isValidated, date)
                 }
-                handler?(true, date)
-                delegate?.validSchedule(isvalid: true, date: date)
             }
         }
     }
     
-    static func validateDate(_ date: Date, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String)-> ())?) {
+    private static func validatehour(dictionary: [String: Any],_ apoinmentType:String, vc:UIViewController, actualDateString: String) -> Bool {
+        let apoinment = Apoinment(dictionary: dictionary)
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "dd/MM/yyyy HH:mm"
+        let apoinmentDate: Date? = dateFormatterGet.date(from: apoinment.date)
+        let actualDate: Date? = dateFormatterGet.date(from: actualDateString)
+        let apoinmentComponents = components(apoinmentDate ?? Date())
+        let actualComponents = components(actualDate ?? Date())
+        
+        if apoinment.type == apoinmentType && apoinment.date == actualDateString {
+            vc.alert(title: "Lo sentimos!", message: "Ya existe una cita agendada a esta hora")
+            return false
+        } else if apoinment.type != apoinmentType && apoinment.date == actualDateString {
+            vc.alert(title: "Lo sentimos!", message: "Ya existe una cita agendada a esta hora")
+            return false
+        } else if apoinment.type == apoinmentType && apoinment.date != actualDateString {
+            return true
+        }
+        let fomrasdf = DateComponentsFormatter()
+        fomrasdf.allowedUnits = [.minute]
+        print(fomrasdf.string(from: apoinmentDate!, to: actualDate!))
+        
+        
+        return false
+    }
+    
+    private static func components(_ date: Date) -> (Int, Int) {
+        let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+        guard let hour = components.hour,
+            let minute = components.minute else {return (0,0)}
+        return (hour, minute)
+    }
+    
+    static func validateDate(_ date: Date, apoinmentType: String, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String)-> ())?) {
         let date = stringDate(date: date)
-        validateDateHour(doc: .apointment, date: date, viewController: viewController, handler: handler)
+        validateDateHour(doc: .apointment, apoinmentType: apoinmentType, date: date, viewController: viewController, handler: handler)
     }
     
     static func stringDate(date: Date) -> String {
@@ -67,6 +97,8 @@ class ScheduleApoinmentViewModel: NSObject {
             let year = components.year,
             let hour = components.hour,
             let minute = components.minute else {return ""}
+        let formatter = DateFormatter()
+        formatter.dateFormat = ""
         let date = "\(day)/\(month)/\(year) \(hour):\(minute)"
         return date
     }

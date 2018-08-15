@@ -38,7 +38,7 @@ class MedicalApoinmentViewController: UIViewController {
     }
 
     @objc func dateChanged(_ sender: UIDatePicker) {
-        ScheduleApoinmentViewModel.validateDate(sender.date, viewController: self, handler: nil)
+        //ScheduleApoinmentViewModel.validateDate(sender.date, apoinmentType: apoinmentType, viewController: self, handler: nil)
     }
     
     @IBAction func apoinmentType(_ sender: UISegmentedControl) {
@@ -61,7 +61,7 @@ class MedicalApoinmentViewController: UIViewController {
             return
         }
         
-        ScheduleApoinmentViewModel.validateDate(datePicker.date, viewController: self) { [weak self] (isValid, dateValidated)  in
+        ScheduleApoinmentViewModel.validateDate(datePicker.date, apoinmentType: apoinmentType, viewController: self) { [weak self] (isValid, dateValidated)  in
             if isValid {
                 ScheduleApoinmentViewModel.createApoinment(
                     patientName: self?.consultant?.consultantName ?? "",
