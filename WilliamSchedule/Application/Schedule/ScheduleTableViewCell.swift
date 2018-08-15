@@ -12,12 +12,13 @@ class ScheduleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var consultant: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var hourLabel: UILabel!
+    @IBOutlet weak var apoinmentType: UILabel!
+    
     var apoinment: Apoinment? {
         didSet {
             consultant.text = apoinment?.patient
             dateLabel.text = apoinment?.date
-            hourLabel.text = apoinment?.hour
+            apoinmentType.text = apoinment?.type
         }
     }
 }

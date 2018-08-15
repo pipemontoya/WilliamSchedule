@@ -12,11 +12,11 @@ class Apoinment: NSObject {
     
     let patient: String
     let date: String
-    let hour: String
+    let type: String
     
     init(dictionary: [String: Any]) {
         self.patient = dictionary["patient"] as? String ?? ""
         self.date = dictionary["date"] as? String ?? ""
-        self.hour = dictionary["hour"] as? String ?? ""
+        self.type = dictionary["type"] as? String ?? ""
     }
 }

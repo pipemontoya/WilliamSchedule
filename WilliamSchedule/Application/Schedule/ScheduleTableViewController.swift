@@ -35,6 +35,7 @@ class ScheduleTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "schedule", for: indexPath) as? ScheduleTableViewCell else {
             return UITableViewCell()
         }
+        guard apoinmentsScheduled.count != 0 else {return UITableViewCell()}
         cell.apoinment = apoinmentsScheduled[indexPath.row]
         return cell
     }
