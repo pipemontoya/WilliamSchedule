@@ -40,9 +40,4 @@ class ScheduleModelView: NSObject {
             }
         }
     }
-    
-    static func apoinment() {
-        
-    }
-    
 }

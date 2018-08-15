@@ -23,6 +23,12 @@ class MedicalApoinmentViewController: UIViewController {
     }
     
     @IBAction func scheduleApoinment(_ sender: UIButton) {
+        guard patient.text != "",
+            dateField.text != "",
+            HourField.text != "" else {
+                alert(title: "Error", message: "Todos los campos deben estar diligenciados")
+                return
+        }
         
         ScheduleApoinmentViewModel.createApoinment(
             patientName: patient.text ?? "",

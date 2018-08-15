@@ -43,7 +43,7 @@ class PatientsViewController: UIViewController {
         guard consultantName.text != "",
             birthdateField.text != "",
             phoneFiled.text != "" else {
-                //TODO: Alert ingresar los valores
+                alert(title: "Error", message: "Todos los campos deben estar diligenciados")
             return
         }
         ConsultantsViewModel.createConsultant(
