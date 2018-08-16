@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,46 +72,71 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-mq-tDO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-mq-tDO">
                                 <rect key="frame" x="0.0" y="255" width="375" height="363"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="consultants" rowHeight="110" id="nOf-kC-Mg4" customClass="ConsultantsTableViewCell" customModule="WilliamSchedule" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="consultants" rowHeight="120" id="nOf-kC-Mg4" customClass="ConsultantsTableViewCell" customModule="WilliamSchedule" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nOf-kC-Mg4" id="B6Q-bQ-2Sn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andres Felipe Montoya Marín" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHi-9j-DYR">
-                                                    <rect key="frame" x="16" y="19" width="343" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdate: 28 de diciembre 1990" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k7-SW-d05">
-                                                    <rect key="frame" x="24" y="48" width="335" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: 3176388575" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-v4-oRy">
-                                                    <rect key="frame" x="24" y="77" width="335" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gU-X0-AFG">
+                                                    <rect key="frame" x="32" y="8" width="311" height="104"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andres Felipe Montoya Marín" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHi-9j-DYR">
+                                                            <rect key="frame" x="16" y="8" width="279" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdate: 28 de diciembre 1990" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k7-SW-d05">
+                                                            <rect key="frame" x="16" y="37" width="278.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: 3176388575" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkd-v4-oRy">
+                                                            <rect key="frame" x="16" y="66" width="153.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="xj5-jT-oIi">
+                                                            <rect key="frame" x="265" y="66" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="30" id="IZY-uA-cQz"/>
+                                                                <constraint firstAttribute="width" secondItem="xj5-jT-oIi" secondAttribute="height" multiplier="1:1" id="cwT-4T-Azr"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.36972112359999998" green="0.4573653338" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="bkd-v4-oRy" firstAttribute="top" secondItem="6k7-SW-d05" secondAttribute="bottom" constant="8" id="DET-By-zpi"/>
+                                                        <constraint firstItem="iHi-9j-DYR" firstAttribute="top" secondItem="8gU-X0-AFG" secondAttribute="top" constant="8" id="Gmm-n4-sO3"/>
+                                                        <constraint firstItem="bkd-v4-oRy" firstAttribute="leading" secondItem="8gU-X0-AFG" secondAttribute="leading" constant="16" id="JNf-df-03g"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xj5-jT-oIi" secondAttribute="trailing" constant="16" id="KIJ-s3-zRh"/>
+                                                        <constraint firstItem="iHi-9j-DYR" firstAttribute="leading" secondItem="8gU-X0-AFG" secondAttribute="leading" constant="16" id="Lcl-o1-Unw"/>
+                                                        <constraint firstItem="6k7-SW-d05" firstAttribute="top" secondItem="iHi-9j-DYR" secondAttribute="bottom" constant="8" id="XHG-HW-slT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6k7-SW-d05" secondAttribute="trailing" constant="16" id="bJm-k4-EmW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iHi-9j-DYR" secondAttribute="trailing" constant="16" id="gzD-Hg-QHF"/>
+                                                        <constraint firstItem="6k7-SW-d05" firstAttribute="leading" secondItem="8gU-X0-AFG" secondAttribute="leading" constant="16" id="kTO-cv-MwP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xj5-jT-oIi" secondAttribute="bottom" constant="8" id="xuw-a3-A8y"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="6k7-SW-d05" secondAttribute="trailing" constant="16" id="9gW-0N-U3d"/>
-                                                <constraint firstAttribute="trailing" secondItem="iHi-9j-DYR" secondAttribute="trailing" constant="16" id="GhZ-PC-IdL"/>
-                                                <constraint firstItem="6k7-SW-d05" firstAttribute="top" secondItem="iHi-9j-DYR" secondAttribute="bottom" constant="8" id="HE2-aS-j8K"/>
-                                                <constraint firstItem="bkd-v4-oRy" firstAttribute="top" secondItem="6k7-SW-d05" secondAttribute="bottom" constant="8" id="KpE-Rd-jh3"/>
-                                                <constraint firstItem="bkd-v4-oRy" firstAttribute="leading" secondItem="B6Q-bQ-2Sn" secondAttribute="leading" constant="24" id="RAk-K6-qvT"/>
-                                                <constraint firstItem="iHi-9j-DYR" firstAttribute="leading" secondItem="B6Q-bQ-2Sn" secondAttribute="leading" constant="16" id="WgT-9r-KBS"/>
-                                                <constraint firstItem="6k7-SW-d05" firstAttribute="leading" secondItem="B6Q-bQ-2Sn" secondAttribute="leading" constant="24" id="jzW-th-H1V"/>
-                                                <constraint firstItem="iHi-9j-DYR" firstAttribute="top" secondItem="B6Q-bQ-2Sn" secondAttribute="topMargin" constant="8" id="per-bz-uY3"/>
-                                                <constraint firstAttribute="trailing" secondItem="bkd-v4-oRy" secondAttribute="trailing" constant="16" id="rcs-7y-HzI"/>
+                                                <constraint firstItem="8gU-X0-AFG" firstAttribute="leading" secondItem="B6Q-bQ-2Sn" secondAttribute="leading" constant="32" id="59q-bb-0fa"/>
+                                                <constraint firstItem="8gU-X0-AFG" firstAttribute="top" secondItem="B6Q-bQ-2Sn" secondAttribute="top" constant="8" id="FqQ-aq-754"/>
+                                                <constraint firstAttribute="trailing" secondItem="8gU-X0-AFG" secondAttribute="trailing" constant="32" id="Kn4-2A-I9T"/>
+                                                <constraint firstAttribute="bottom" secondItem="8gU-X0-AFG" secondAttribute="bottom" constant="8" id="NVP-v8-WHQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -169,4 +193,7 @@
             <point key="canvasLocation" x="989.60000000000002" y="179.46026986506749"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" width="50" height="44"/>
+    </resources>
 </document>

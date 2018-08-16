@@ -20,7 +20,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bxW-5w-UhJ">
                                 <rect key="frame" x="48" y="525" width="279" height="45"/>
-                                <color key="backgroundColor" red="0.12941176469999999" green="0.1215686275" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.36862745098039218" green="0.45882352941176469" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fEE-jD-T9o"/>
                                 </constraints>
@@ -71,7 +71,7 @@
                                     <segment title="seguimiento"/>
                                     <segment title="Anual"/>
                                 </segments>
-                                <color key="tintColor" red="0.12941176469999999" green="0.1215686275" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.36972112359999998" green="0.4573653338" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="apoinmentType:" destination="Z9x-7e-fMP" eventType="valueChanged" id="N9V-r3-RSI"/>
                                 </connections>
@@ -82,7 +82,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.67451404770000001" green="0.82219933069999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="n0R-l8-1dP" firstAttribute="trailing" secondItem="xqJ-yE-UhT" secondAttribute="trailing" constant="32" id="39R-47-QlX"/>
                             <constraint firstItem="n0R-l8-1dP" firstAttribute="trailing" secondItem="oVx-IK-kF6" secondAttribute="trailing" constant="32" id="3R3-6O-BKD"/>
