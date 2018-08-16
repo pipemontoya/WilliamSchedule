@@ -105,7 +105,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="xj5-jT-oIi">
-                                                            <rect key="frame" x="265" y="66" width="30" height="30"/>
+                                                            <rect key="frame" x="265" y="58" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="IZY-uA-cQz"/>
                                                                 <constraint firstAttribute="width" secondItem="xj5-jT-oIi" secondAttribute="height" multiplier="1:1" id="cwT-4T-Azr"/>
@@ -123,7 +123,7 @@
                                                         <constraint firstAttribute="trailing" secondItem="6k7-SW-d05" secondAttribute="trailing" constant="16" id="bJm-k4-EmW"/>
                                                         <constraint firstAttribute="trailing" secondItem="iHi-9j-DYR" secondAttribute="trailing" constant="16" id="gzD-Hg-QHF"/>
                                                         <constraint firstItem="6k7-SW-d05" firstAttribute="leading" secondItem="8gU-X0-AFG" secondAttribute="leading" constant="16" id="kTO-cv-MwP"/>
-                                                        <constraint firstAttribute="bottom" secondItem="xj5-jT-oIi" secondAttribute="bottom" constant="8" id="xuw-a3-A8y"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xj5-jT-oIi" secondAttribute="bottom" constant="16" id="xuw-a3-A8y"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

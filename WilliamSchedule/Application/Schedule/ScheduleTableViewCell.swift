@@ -14,6 +14,7 @@ class ScheduleTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var apoinmentType: UILabel!
     @IBOutlet weak var viewBackgroundCell: UIView!
+    @IBOutlet weak var iconView: UIImageView!
     
     var apoinment: Apoinment? {
         didSet {
@@ -29,9 +30,13 @@ class ScheduleTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         let date = dateFormatter.date(from: date.date)
         if Date() > date! {
+            iconView.image = UIImage(named: "done")
             viewBackgroundCell.backgroundColor = #colorLiteral(red: 1, green: 0.4019555726, blue: 0.3372226449, alpha: 1)
+            return
         } else {
+            iconView.image = UIImage(named: "schedule")
             viewBackgroundCell.backgroundColor = #colorLiteral(red: 0.368627451, green: 0.4588235294, blue: 1, alpha: 1)
+
         }
     }
 }

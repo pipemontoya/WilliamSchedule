@@ -64,6 +64,7 @@ extension AppDelegate {
         nav.navigationBar.prefersLargeTitles = true
         nav.navigationBar.barTintColor = #colorLiteral(red: 0.3697211236, green: 0.4573653338, blue: 1, alpha: 1)
         nav.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        nav.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }

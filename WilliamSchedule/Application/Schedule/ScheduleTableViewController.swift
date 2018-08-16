@@ -20,7 +20,7 @@ class ScheduleTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "Agendamientos"
+        navigationController?.navigationBar.topItem?.title = "Citas Programadas"
         ScheduleModelView.countApointments(doc: .apointment)
     }
 
