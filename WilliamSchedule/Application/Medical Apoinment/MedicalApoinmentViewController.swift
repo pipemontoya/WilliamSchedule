@@ -62,7 +62,9 @@ class MedicalApoinmentViewController: UIViewController {
     
     @IBAction func scheduleApoinment(_ sender: UIButton) {
         guard consultant?.consultantName != nil else {
-            alert(title: "Error", message: "Debes escoger el nombre del paciente para agendar")
+            alert(title: "No tienes pacientes", message: "Debes registrar pacientes para aguendar citas") { [weak self] (_) in
+                self?.tabBarController?.selectedIndex = 0
+            }
             return
         }
         
@@ -75,6 +77,9 @@ class MedicalApoinmentViewController: UIViewController {
                     type: self?.apoinmentType ?? "",
                     docType: .apointment)
             }
+            self?.alert(title: "Cita Agendada", message: "La cita fué agendada con éxito", handler: { (_) in
+                self?.tabBarController?.selectedIndex = 2
+            })
         }
     }
     
@@ -82,6 +87,7 @@ class MedicalApoinmentViewController: UIViewController {
 
 extension MedicalApoinmentViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard consultantsData.count != 0 else { return }
         consultant = consultantsData[row]
     }
 }
@@ -102,6 +108,10 @@ extension MedicalApoinmentViewController: UIPickerViewDataSource {
 }
 
 extension MedicalApoinmentViewController: ConsultantDelegate {
+    func isAdded(consultatn isAdded: Bool) {
+        
+    }
+    
     func countConsultants(numberConsultants: Int, consultants: [Consultant]) {
         countConsultant = numberConsultants
         consultantsData = consultants

@@ -16,8 +16,9 @@ class PatientsViewController: UIViewController {
     @IBOutlet weak var birthdateField: UITextField!
     @IBOutlet weak var phoneFiled: UITextField!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var openButton: UIButton!
     
-    
+    var isPress = false
     var countConsultants = 0
     var consultantsData: [Consultant] = []
     
@@ -29,15 +30,20 @@ class PatientsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        tableView.reloadData()
         navigationController?.navigationBar.topItem?.title = "Pacientes"
         ConsultantsViewModel.countConsultants(doc: .consultant)
     }
     
     @IBAction func addConsultant(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.5) {
-            self.tableViewConstraint.constant = 180
-            self.view.layoutIfNeeded()
+        isPress = !isPress
+        if isPress {
+            sender.setImage(UIImage(named: "close"), for: .normal)
+            animate(duration: 0.5, constant: 180)
+            return
         }
+        sender.setImage(UIImage(named: "open"), for: .normal)
+        animate(duration: 0.5, constant: 16)
     }
     
     @IBAction func saveConsultant(_ sender: UIButton) {
@@ -52,13 +58,19 @@ class PatientsViewController: UIViewController {
             birthDate: birthdateField.text ?? "",
             phone: phoneFiled.text ?? "",
             docType: .consultant)
-        UIView.animate(withDuration: 0.5) {
-            self.tableViewConstraint.constant = 16
-            self.view.layoutIfNeeded()
-        }
+        animate(duration: 0.5, constant: 16)
+        openButton.setImage(UIImage(named: "open"), for: .normal)
         consultantName.text = ""
         birthdateField.text = ""
         phoneFiled.text = ""
+        ConsultantsViewModel.countConsultants(doc: .consultant)
+    }
+    
+    func animate(duration: Double, constant: CGFloat) {
+        UIView.animate(withDuration: duration) {
+            self.tableViewConstraint.constant = constant
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
@@ -86,6 +98,7 @@ extension PatientsViewController: UITableViewDataSource {
 }
 
 extension PatientsViewController: ConsultantDelegate {
+  
     func countConsultants(numberConsultants: Int, consultants: [Consultant]) {
         countConsultants = numberConsultants
         consultantsData = consultants

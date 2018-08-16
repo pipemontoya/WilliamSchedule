@@ -56,24 +56,25 @@
                                     <action selector="saveConsultant:" destination="MUt-85-2eq" eventType="touchUpInside" id="hTu-RU-QhT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKf-qt-ked">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKf-qt-ked">
                                 <rect key="frame" x="16" y="52" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MKf-qt-ked" secondAttribute="height" multiplier="1:1" id="m7W-9z-ANV"/>
                                     <constraint firstAttribute="width" constant="25" id="p8d-5h-0sc"/>
                                 </constraints>
+                                <state key="normal" image="open"/>
                                 <connections>
                                     <action selector="addConsultant:" destination="MUt-85-2eq" eventType="touchUpInside" id="6rt-Kc-5TM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agregar Paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETU-oh-dtf">
-                                <rect key="frame" x="49" y="54" width="310" height="21"/>
+                                <rect key="frame" x="49" y="53.5" width="310" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-mq-tDO">
-                                <rect key="frame" x="0.0" y="255" width="375" height="363"/>
+                                <rect key="frame" x="0.0" y="254.5" width="375" height="363.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="consultants" rowHeight="120" id="nOf-kC-Mg4" customClass="ConsultantsTableViewCell" customModule="WilliamSchedule" customModuleProvider="target">
@@ -182,6 +183,7 @@
                     <connections>
                         <outlet property="birthdateField" destination="7RZ-3W-HRO" id="dUi-jb-CEQ"/>
                         <outlet property="consultantName" destination="rZ4-l1-Efe" id="NFS-uh-G6k"/>
+                        <outlet property="openButton" destination="MKf-qt-ked" id="Yxx-MP-dh9"/>
                         <outlet property="phoneFiled" destination="K4t-Nm-AeO" id="DpJ-cs-Cyr"/>
                         <outlet property="saveButton" destination="q0X-uq-pwt" id="zyF-kc-FAz"/>
                         <outlet property="tableView" destination="sPG-mq-tDO" id="2pC-Gd-LYK"/>
@@ -195,5 +197,6 @@
     </scenes>
     <resources>
         <image name="heart" width="50" height="44"/>
+        <image name="open" width="50" height="50"/>
     </resources>
 </document>
