@@ -59,7 +59,12 @@ extension AppDelegate {
     public func startStoryboard() {
         let auth = AuthService.shared
         let name = auth.isLogged ? "Main" : "Login"
-        window?.rootViewController = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()
+        let main =  UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()
+        let nav = UINavigationController(rootViewController: main!)
+        nav.navigationBar.prefersLargeTitles = true
+        nav.navigationBar.barTintColor = #colorLiteral(red: 0.3697211236, green: 0.4573653338, blue: 1, alpha: 1)
+        nav.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
 }

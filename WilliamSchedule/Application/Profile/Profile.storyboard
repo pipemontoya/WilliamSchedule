@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile-->
+        <!--Perfil-->
         <scene sceneID="yed-xq-sWM">
             <objects>
                 <viewController id="lSs-mi-5i2" customClass="ProfileViewController" customModule="WilliamSchedule" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="AFF-lw-dCx"/>
                                 </constraints>
-                                <state key="normal" title="Log Out">
+                                <state key="normal" title="Cerrar sesión">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -106,7 +106,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rnw-5b-lJr"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="hLr-zg-5Rs"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" id="hLr-zg-5Rs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="photo" destination="7iD-50-odX" id="sYp-C9-dlD"/>

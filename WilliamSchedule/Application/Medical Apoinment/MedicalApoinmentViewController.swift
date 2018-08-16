@@ -36,6 +36,11 @@ class MedicalApoinmentViewController: UIViewController {
         ConsultantsViewModel.delegate = self
         ConsultantsViewModel.countConsultants(doc: .consultant)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.topItem?.title = "Agendar"
+    }
 
     @objc func dateChanged(_ sender: UIDatePicker) {
         //ScheduleApoinmentViewModel.validateDate(sender.date, apoinmentType: apoinmentType, viewController: self, handler: nil)

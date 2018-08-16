@@ -24,6 +24,11 @@ class LoginViewController: UIViewController {
         loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100.0).isActive = true
         loginButton.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.topItem?.title = "Mediwilliams"
+    }
 
 }
 
