@@ -22,18 +22,30 @@ class ConsultantsViewModel: NSObject {
     
     static func createConsultant(patientName: Any, birthDate: Any, phone: Any, docType: Doc){
         let consultant = ["name": patientName, "birthDate": birthDate, "phone": phone]
-        addConsultant(data: consultant, doc: docType)
+        addConsultant(data: consultant, docName: consultant["name"] as! String, doc: docType)
     }
     
-    private static func addConsultant(data: [String: Any], doc: Doc) {
-        var ref: DocumentReference? = nil
-        ref = db.collection(doc.rawValue).addDocument(data: data, completion: { (err) in
+    static func updateConsultant(birthDate: Any, phone: Any, docType: Doc, docName: String) {
+        let consultant = ["name": docName, "birthDate": birthDate, "phone": phone]
+        addConsultant(data: consultant, docName: docName, doc: docType)
+    }
+    
+    private static func addConsultant(data: [String: Any], docName: String, doc: Doc) {
+//        var ref: DocumentReference? = nil
+        db.collection(doc.rawValue).document(docName).setData(data) { (err) in
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
-                print("Document added with ID: \(ref!.documentID)")
+                print("Document added")
             }
-        })
+        }
+//        ref = db.collection(doc.rawValue).addDocument(data: data, completion: { (err) in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//            } else {
+//                print("Document added with ID: \(ref!.documentID)")
+//            }
+//        })
     }
     
     private static func setupdb() {

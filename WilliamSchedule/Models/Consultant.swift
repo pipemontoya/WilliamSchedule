@@ -9,7 +9,6 @@
 import Foundation
 
 class Consultant: NSObject {
-    
     let consultantName: String
     let birthDate: String
     let phone: String

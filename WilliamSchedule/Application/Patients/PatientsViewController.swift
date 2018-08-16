@@ -35,6 +35,15 @@ class PatientsViewController: UIViewController {
         tableView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "open" {
+            guard let destinationVC = segue.destination as? PatientDetailViewController else {
+                return
+            }
+            destinationVC.constltant = consultantsData[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
+  
     @IBAction func addConsultant(_ sender: UIButton) {
         isPress = !isPress
         if isPress {
@@ -77,7 +86,9 @@ class PatientsViewController: UIViewController {
 }
 
 extension PatientsViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "open", sender: nil)
+    }
 }
 
 extension PatientsViewController: UITableViewDataSource {
@@ -89,6 +100,7 @@ extension PatientsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "consultants", for: indexPath) as? ConsultantsTableViewCell else {
             return UITableViewCell()
         }
+        guard consultantsData.count != 0 else {return UITableViewCell()}
         cell.consultant = consultantsData[indexPath.row]
         return cell
     }
