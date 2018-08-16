@@ -107,7 +107,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n0R-l8-1dP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Agendar" id="heY-oN-ZGN"/>
+                    <tabBarItem key="tabBarItem" title="Agendar" image="apoinment" selectedImage="apoinment-b" id="heY-oN-ZGN"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ConsultantsPicker" destination="oVx-IK-kF6" id="3ox-4X-Vt0"/>
@@ -119,4 +119,8 @@
             <point key="canvasLocation" x="-50.399999999999999" y="157.87106446776613"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="apoinment" width="31" height="31"/>
+        <image name="apoinment-b" width="31" height="31"/>
+    </resources>
 </document>

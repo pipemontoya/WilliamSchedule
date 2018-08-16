@@ -178,7 +178,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jXB-UH-aBO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pacientes" id="e0z-2W-tLY"/>
+                    <tabBarItem key="tabBarItem" title="Pacientes" image="consultants" selectedImage="consultants-b" id="e0z-2W-tLY"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="birthdateField" destination="7RZ-3W-HRO" id="dUi-jb-CEQ"/>
@@ -347,6 +347,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="consultants" width="30" height="30"/>
+        <image name="consultants-b" width="30" height="30"/>
         <image name="edit" width="50" height="50"/>
         <image name="heart" width="50" height="44"/>
         <image name="open" width="50" height="50"/>

@@ -12,10 +12,19 @@ import FBSDKLoginKit
 
 class ProfileViewController: UIViewController {
     
+    @IBOutlet weak var profileName: UILabel!
     @IBOutlet weak var photo: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            self.profileName.text = user?.displayName ?? ""
+            let data = try? Data(contentsOf: user?.photoURL ?? URL(fileURLWithPath: ""))
+            if let imageData = data {
+                let image = UIImage(data: imageData)
+                self.photo.image = image
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
