@@ -61,11 +61,12 @@ class MedicalApoinmentViewController: UIViewController {
             return
         }
         
-        ScheduleApoinmentViewModel.validateDate(datePicker.date, apoinmentType: apoinmentType, viewController: self) { [weak self] (isValid, dateValidated)  in
-            if isValid {
+        ScheduleApoinmentViewModel.validateDate(datePicker.date, apoinmentType: apoinmentType, viewController: self) { [weak self] (isValid, dateValidated, endDate)  in
+            if isValid {                
                 ScheduleApoinmentViewModel.createApoinment(
                     patientName: self?.consultant?.consultantName ?? "",
                     date: dateValidated,
+                    endDate: endDate,
                     type: self?.apoinmentType ?? "",
                     docType: .apointment)
             }

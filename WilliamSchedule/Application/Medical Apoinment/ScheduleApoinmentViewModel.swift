@@ -22,8 +22,8 @@ class ScheduleApoinmentViewModel: NSObject {
     static weak var delegate: ScheduleApoinmentDelegate?
     private static let db = Firestore.firestore()
     
-    static func createApoinment(patientName: Any, date: Any, type: Any, docType: Doc){
-        let apoinment = ["patient": patientName, "date": date, "type": type]
+    static func createApoinment(patientName: Any, date: Any, endDate: Any, type: Any, docType: Doc) {
+        let apoinment = ["patient": patientName, "date": date, "endDate": endDate, "type": type]
         addApoinment(data: apoinment, doc: docType)
     }
     
@@ -38,15 +38,20 @@ class ScheduleApoinmentViewModel: NSObject {
         })
     }
     
-    private static func validateDateHour(doc: Doc,apoinmentType: String, date: String, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String) -> ())?) {
+    private static func validateDateHour(doc: Doc,apoinmentType: String, date: String, endDate: String, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String, _ endDate: String) -> ())?) {
         db.collection(doc.rawValue).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                for document in querySnapshot!.documents {
-                    let isValidated = validatehour(dictionary: document.data(), apoinmentType, vc: viewController, actualDateString: date)
-                    delegate?.validSchedule(isvalid: isValidated, date: date)
-                    handler?(isValidated, date)
+                if querySnapshot!.documents.count == 0 {
+                    delegate?.validSchedule(isvalid: true, date: date)
+                    handler?(true, date, endDate)
+                } else {
+                    for document in querySnapshot!.documents {
+                        let isValidated = validatehour(dictionary: document.data(), apoinmentType, vc: viewController, actualDateString: date)
+                        delegate?.validSchedule(isvalid: isValidated, date: date)
+                        handler?(isValidated, date, endDate)
+                    }
                 }
             }
         }
@@ -75,7 +80,7 @@ class ScheduleApoinmentViewModel: NSObject {
         print(fomrasdf.string(from: apoinmentDate!, to: actualDate!))
         
         
-        return false
+        return true
     }
     
     private static func components(_ date: Date) -> (Int, Int) {
@@ -85,9 +90,16 @@ class ScheduleApoinmentViewModel: NSObject {
         return (hour, minute)
     }
     
-    static func validateDate(_ date: Date, apoinmentType: String, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String)-> ())?) {
+    static func validateDate(_ date: Date, apoinmentType: String, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String, _ endDate: String)-> ())?) {
+        let endDate: Date?
+        if apoinmentType == "seguimiento" {
+            endDate = date.addingTimeInterval(15 * 60)
+        } else {
+            endDate = date.addingTimeInterval(30 * 60)
+        }
+        let endApoinment = stringDate(date: endDate ?? Date())
         let date = stringDate(date: date)
-        validateDateHour(doc: .apointment, apoinmentType: apoinmentType, date: date, viewController: viewController, handler: handler)
+        validateDateHour(doc: .apointment, apoinmentType: apoinmentType, date: date, endDate: endApoinment, viewController: viewController, handler: handler)
     }
     
     static func stringDate(date: Date) -> String {
@@ -102,6 +114,7 @@ class ScheduleApoinmentViewModel: NSObject {
         let date = "\(day)/\(month)/\(year) \(hour):\(minute)"
         return date
     }
+    
     
     static func roundDatePicker(minuteInterval: Int, date: Date) -> Date {
         let calendar = Calendar.current

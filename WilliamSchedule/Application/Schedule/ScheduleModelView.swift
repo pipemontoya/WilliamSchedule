@@ -32,7 +32,7 @@ class ScheduleModelView: NSObject {
                 print("Error getting documents: \(err)")
             } else {
                 var apoinments: [Apoinment] = []
-                for document in querySnapshot!.documents where document.data().count == 3 {
+                for document in querySnapshot!.documents where document.data().count == 4 {
                     apoinments.append(Apoinment(dictionary: document.data()))
                 }
                 self.apoinments = apoinments
