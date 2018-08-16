@@ -38,7 +38,11 @@ class ScheduleApoinmentViewModel: NSObject {
         })
     }
     
-    private static func validateDateHour(doc: Doc,apoinmentType: String, date: String, endDate: String, viewController: UIViewController, handler: ((_ valid: Bool, _ dateValidated: String, _ endDate: String) -> ())?) {
+    private static func validateDateHour(
+        doc: Doc,apoinmentType: String,
+        date: String, endDate: String,
+        viewController: UIViewController,
+        handler: ((_ valid: Bool, _ dateValidated: String, _ endDate: String) -> ())?) {
         db.collection(doc.rawValue).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -47,40 +51,59 @@ class ScheduleApoinmentViewModel: NSObject {
                     delegate?.validSchedule(isvalid: true, date: date)
                     handler?(true, date, endDate)
                 } else {
+                    var countBool = 0
                     for document in querySnapshot!.documents {
-                        let isValidated = validatehour(dictionary: document.data(), apoinmentType, vc: viewController, actualDateString: date)
-                        delegate?.validSchedule(isvalid: isValidated, date: date)
-                        handler?(isValidated, date, endDate)
+                        let isValidated = validatehour(
+                            dictionary: document.data(),
+                            apoinmentType,
+                            vc: viewController,
+                            actualDateString: date,
+                            actualEndDate: endDate)
+                        if !isValidated {
+                            countBool += 1
+                        }
+                    }
+                    if countBool != 0 {
+                        delegate?.validSchedule(isvalid: false, date: date)
+                        handler?(false, date, endDate)
+                    } else {
+                        delegate?.validSchedule(isvalid: true, date: date)
+                        handler?(true, date, endDate)
                     }
                 }
             }
         }
     }
     
-    private static func validatehour(dictionary: [String: Any],_ apoinmentType:String, vc:UIViewController, actualDateString: String) -> Bool {
+    private static func validatehour(
+        dictionary: [String: Any],
+        _ apoinmentType: String,
+        vc:UIViewController, actualDateString: String,
+        actualEndDate: String) -> Bool {
+        
         let apoinment = Apoinment(dictionary: dictionary)
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "dd/MM/yyyy HH:mm"
         let apoinmentDate: Date? = dateFormatterGet.date(from: apoinment.date)
+        let apointmentEndDate: Date? = dateFormatterGet.date(from: apoinment.endDate)
         let actualDate: Date? = dateFormatterGet.date(from: actualDateString)
-        let apoinmentComponents = components(apoinmentDate ?? Date())
-        let actualComponents = components(actualDate ?? Date())
+        let actualEndDate: Date? = dateFormatterGet.date(from: actualEndDate)
         
-        if apoinment.type == apoinmentType && apoinment.date == actualDateString {
-            vc.alert(title: "Lo sentimos!", message: "Ya existe una cita agendada a esta hora")
+        if actualDate == apoinmentDate {
+            vc.alert(
+                title: "no es posible agendar la cita",
+                message: "Ya tiene agragada una cita a esta hora, por favor revisa las citas programadas")
             return false
-        } else if apoinment.type != apoinmentType && apoinment.date == actualDateString {
-            vc.alert(title: "Lo sentimos!", message: "Ya existe una cita agendada a esta hora")
-            return false
-        } else if apoinment.type == apoinmentType && apoinment.date != actualDateString {
+        } else if (actualDate! >= apointmentEndDate!) && (actualDate! > apoinmentDate!) {
             return true
+        } else if (actualEndDate! <= apoinmentDate!) && (actualDate! < apoinmentDate!) {
+            return true
+        } else {
+            vc.alert(
+                title: "no es posible agendar la cita",
+                message: "Ya tiene agragada una cita a esta hora, por favor revisa las citas programadas")
+            return false
         }
-        let fomrasdf = DateComponentsFormatter()
-        fomrasdf.allowedUnits = [.minute]
-        print(fomrasdf.string(from: apoinmentDate!, to: actualDate!))
-        
-        
-        return true
     }
     
     private static func components(_ date: Date) -> (Int, Int) {

@@ -12,11 +12,13 @@ class Apoinment: NSObject {
     
     let patient: String
     let date: String
+    let endDate: String
     let type: String
     
     init(dictionary: [String: Any]) {
         self.patient = dictionary["patient"] as? String ?? ""
         self.date = dictionary["date"] as? String ?? ""
+        self.endDate = dictionary["endDate"] as? String ?? ""
         self.type = dictionary["type"] as? String ?? ""
     }
 }
