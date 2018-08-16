@@ -27,7 +27,8 @@ class ScheduleModelView: NSObject {
     
     static func countApointments(doc: Doc) {
         setupdb()
-        db.collection(doc.rawValue).getDocuments() { (querySnapshot, err) in
+        
+        db.collection(doc.rawValue).order(by: "date", descending: false).getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
