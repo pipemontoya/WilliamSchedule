@@ -61,9 +61,17 @@ extension AppDelegate {
         let name = auth.isLogged ? "Main" : "Login"
         let main =  UIStoryboard(name: name, bundle: nil).instantiateInitialViewController()
         let nav = UINavigationController(rootViewController: main!)
-        nav.navigationBar.prefersLargeTitles = true
+        if #available(iOS 11.0, *) {
+            nav.navigationBar.prefersLargeTitles = true
+        } else {
+            // Fallback on earlier versions
+        }
         nav.navigationBar.barTintColor = #colorLiteral(red: 0.3697211236, green: 0.4573653338, blue: 1, alpha: 1)
-        nav.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        if #available(iOS 11.0, *) {
+            nav.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        } else {
+            // Fallback on earlier versions
+        }
         nav.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         window?.rootViewController = nav
         window?.makeKeyAndVisible()

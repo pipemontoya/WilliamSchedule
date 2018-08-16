@@ -30,9 +30,9 @@ class PatientsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tableView.reloadData()
         navigationController?.navigationBar.topItem?.title = "Pacientes"
         ConsultantsViewModel.countConsultants(doc: .consultant)
+        tableView.reloadData()
     }
     
     @IBAction func addConsultant(_ sender: UIButton) {
@@ -59,11 +59,13 @@ class PatientsViewController: UIViewController {
             phone: phoneFiled.text ?? "",
             docType: .consultant)
         animate(duration: 0.5, constant: 16)
+        isPress = false
         openButton.setImage(UIImage(named: "open"), for: .normal)
         consultantName.text = ""
         birthdateField.text = ""
         phoneFiled.text = ""
         ConsultantsViewModel.countConsultants(doc: .consultant)
+        tableView.reloadData()
     }
     
     func animate(duration: Double, constant: CGFloat) {
@@ -98,12 +100,9 @@ extension PatientsViewController: UITableViewDataSource {
 }
 
 extension PatientsViewController: ConsultantDelegate {
-  
     func countConsultants(numberConsultants: Int, consultants: [Consultant]) {
         countConsultants = numberConsultants
         consultantsData = consultants
         tableView.reloadData()
     }
-    
-    
 }

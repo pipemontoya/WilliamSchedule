@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
         loginButton.delegate = self
         loginButton.readPermissions = ["public_profile", "email"]
         view.addSubview(loginButton)
-        loginButton.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1).isActive = true
+        loginButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
         loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100.0).isActive = true
         loginButton.translatesAutoresizingMaskIntoConstraints = false
@@ -39,6 +39,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             print(error.localizedDescription)
             return
         }
+        guard FBSDKAccessToken.current() != nil else {return}
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
             guard let user = user else {return}

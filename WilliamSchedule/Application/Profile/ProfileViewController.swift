@@ -30,7 +30,11 @@ class ProfileViewController: UIViewController {
             let loginManager = FBSDKLoginManager()
             loginManager.logOut()
             let appdelegate = UIApplication.shared.delegate as! AppDelegate
-            appdelegate.startStoryboard()
+            if #available(iOS 11.0, *) {
+                appdelegate.startStoryboard()
+            } else {
+                // Fallback on earlier versions
+            }
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
