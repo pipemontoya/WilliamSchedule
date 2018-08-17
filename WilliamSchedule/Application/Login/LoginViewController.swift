@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navigationController?.navigationBar.topItem?.title = "Mediwilliams"
+        navigationController?.navigationBar.topItem?.title = "Agenda"
     }
 
 }

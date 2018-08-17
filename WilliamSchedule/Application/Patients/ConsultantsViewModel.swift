@@ -30,6 +30,18 @@ class ConsultantsViewModel: NSObject {
         addConsultant(data: consultant, docName: docName, doc: docType)
     }
     
+    static func deleteCounsultant(docType:Doc, docName: String, vc: UIViewController, handler: @escaping (_ wasDeleted: Bool) -> ()) {
+        db.collection(docType.rawValue).document(docName).delete { (error) in
+            guard error == nil else {
+                vc.alert(title: "Lo sentimos", message: "Hubo un error eliminando el paciente")
+                handler(false)
+                return
+            }
+            handler(true)
+            print("Document successfully removed!")
+        }
+    }
+    
     private static func addConsultant(data: [String: Any], docName: String, doc: Doc) {
 //        var ref: DocumentReference? = nil
         db.collection(doc.rawValue).document(docName).setData(data) { (err) in

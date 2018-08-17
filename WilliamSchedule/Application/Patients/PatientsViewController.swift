@@ -89,6 +89,18 @@ extension PatientsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "open", sender: nil)
     }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            ConsultantsViewModel.deleteCounsultant(docType: .consultant, docName: consultantsData[indexPath.row].consultantName, vc: self) { [weak self] (isDeleted) in
+                if isDeleted {
+                    self?.consultantsData.remove(at: indexPath.row)
+                    self?.countConsultants = self?.consultantsData.count ?? 0
+                    self?.tableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension PatientsViewController: UITableViewDataSource {
