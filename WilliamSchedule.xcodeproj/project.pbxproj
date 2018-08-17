@@ -108,7 +108,7 @@
 		6929303F212630220056E5EB /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		69293069212636560056E5EB /* barItemAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = barItemAssets.xcassets; sourceTree = "<group>"; };
 		6929306B21263ADD0056E5EB /* Windsong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Windsong.ttf; sourceTree = "<group>"; };
-		692B8BBC212271E500E25461 /* WilliamSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WilliamSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		692B8BBC212271E500E25461 /* Agenda Médica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agenda Médica.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		692B8BCC212271E600E25461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78FCECF0ACCDD9FC4D24E5FC /* Pods-WilliamSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamSchedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		F569B465B73D496314070DD0 /* Pods_WilliamSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WilliamSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,7 +319,7 @@
 		692B8BBD212271E500E25461 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				692B8BBC212271E500E25461 /* WilliamSchedule.app */,
+				692B8BBC212271E500E25461 /* Agenda Médica.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -340,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		692B8BBB212271E500E25461 /* WilliamSchedule */ = {
+		692B8BBB212271E500E25461 /* Agenda Médica */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 692B8BD1212271E600E25461 /* Build configuration list for PBXNativeTarget "WilliamSchedule" */;
+			buildConfigurationList = 692B8BD1212271E600E25461 /* Build configuration list for PBXNativeTarget "Agenda Médica" */;
 			buildPhases = (
 				F802C29C71F32D31ABD56801 /* [CP] Check Pods Manifest.lock */,
 				692B8BB8212271E500E25461 /* Sources */,
@@ -354,9 +354,9 @@
 			);
 			dependencies = (
 			);
-			name = WilliamSchedule;
+			name = "Agenda Médica";
 			productName = WilliamSchedule;
-			productReference = 692B8BBC212271E500E25461 /* WilliamSchedule.app */;
+			productReference = 692B8BBC212271E500E25461 /* Agenda Médica.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -387,7 +387,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				692B8BBB212271E500E25461 /* WilliamSchedule */,
+				692B8BBB212271E500E25461 /* Agenda Médica */,
 			);
 		};
 /* End PBXProject section */
@@ -699,7 +699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		692B8BD1212271E600E25461 /* Build configuration list for PBXNativeTarget "WilliamSchedule" */ = {
+		692B8BD1212271E600E25461 /* Build configuration list for PBXNativeTarget "Agenda Médica" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				692B8BD2212271E600E25461 /* Debug */,
