@@ -68,11 +68,14 @@ extension AppDelegate {
         }
         nav.navigationBar.barTintColor = #colorLiteral(red: 0.3697211236, green: 0.4573653338, blue: 1, alpha: 1)
         if #available(iOS 11.0, *) {
-            nav.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+            nav.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.font : UIFont(
+                name: "Roboto-Bold", size: 35)!,
+                NSAttributedStringKey.foregroundColor: UIColor.white]
         } else {
             // Fallback on earlier versions
         }
-        nav.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        nav.navigationBar.titleTextAttributes = [NSAttributedStringKey.font : UIFont(
+            name: "Roboto-Bold", size: 20)!, NSAttributedStringKey.foregroundColor: UIColor.white]
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }

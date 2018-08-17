@@ -266,7 +266,7 @@
 		6929302B21262FFC0056E5EB /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				69293054212630790056E5EB /* YouthScript */,
+				69293054212630790056E5EB /* Windsong */,
 				6929302C212630220056E5EB /* roboto */,
 			);
 			path = Fonts;
@@ -298,12 +298,12 @@
 			path = roboto;
 			sourceTree = "<group>";
 		};
-		69293054212630790056E5EB /* YouthScript */ = {
+		69293054212630790056E5EB /* Windsong */ = {
 			isa = PBXGroup;
 			children = (
 				6929306B21263ADD0056E5EB /* Windsong.ttf */,
 			);
-			path = YouthScript;
+			path = Windsong;
 			sourceTree = "<group>";
 		};
 		692B8BB3212271E500E25461 = {
