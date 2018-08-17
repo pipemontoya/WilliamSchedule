@@ -13,6 +13,7 @@ class MainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LocalPushManager.shared.requestAuthorization()
         viewControllers = ViewControllersService.viewcontrollers(views: [.patients, .medicalApoinment, .schedule, .profile])
     }
 

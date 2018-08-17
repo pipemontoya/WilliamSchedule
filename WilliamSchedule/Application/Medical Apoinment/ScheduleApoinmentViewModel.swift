@@ -33,6 +33,8 @@ class ScheduleApoinmentViewModel: NSObject {
             if let err = err {
                 print("Error adding document: \(err)")
             } else {
+                let timeFromDate: TimeInterval = TimeInterval(getInterval(dateString: data["date"] as? String ?? "") - 300)
+                LocalPushManager.shared.sendPush(time: timeFromDate, name: data["patient"] as? String ?? "tu paciente agendado")
                 print("Document added with ID: \(ref!.documentID)")
             }
         })
@@ -136,6 +138,16 @@ class ScheduleApoinmentViewModel: NSObject {
         formatter.dateFormat = ""
         let date = "\(day)/\(month)/\(year) \(hour):\(minute)"
         return date
+    }
+    
+    private static func getInterval(dateString: String) -> Double {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy HH:mm"
+        let date = formatter.date(from: dateString)
+        let currentDate = Date()
+        let component = Set<Calendar.Component>([.second])
+        let interval = Calendar.current.dateComponents(component, from: currentDate, to: date ?? Date())
+        return Double(interval.second ?? 0)
     }
     
     

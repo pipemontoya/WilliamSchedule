@@ -56,6 +56,7 @@
 		6929306A212636560056E5EB /* barItemAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69293069212636560056E5EB /* barItemAssets.xcassets */; };
 		6929306C21263AED0056E5EB /* Windsong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6929306B21263ADD0056E5EB /* Windsong.ttf */; };
 		692B8BCD212271E600E25461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692B8BCB212271E600E25461 /* LaunchScreen.storyboard */; };
+		6941BAB521268589000E0352 /* LocalPushManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941BAB421268589000E0352 /* LocalPushManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		6929306B21263ADD0056E5EB /* Windsong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Windsong.ttf; sourceTree = "<group>"; };
 		692B8BBC212271E500E25461 /* Agenda Médica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agenda Médica.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		692B8BCC212271E600E25461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6941BAB421268589000E0352 /* LocalPushManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPushManager.swift; sourceTree = "<group>"; };
 		78FCECF0ACCDD9FC4D24E5FC /* Pods-WilliamSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WilliamSchedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WilliamSchedule/Pods-WilliamSchedule.debug.xcconfig"; sourceTree = "<group>"; };
 		F569B465B73D496314070DD0 /* Pods_WilliamSchedule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WilliamSchedule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -191,6 +193,7 @@
 			children = (
 				691B99D1212289CF0099B30A /* AuthService.swift */,
 				691B99E121233AC10099B30A /* ViewControllersService.swift */,
+				6941BAB421268589000E0352 /* LocalPushManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				691B99F2212389D40099B30A /* ScheduleTableViewController.swift in Sources */,
 				691B99FB2123E72C0099B30A /* PatientsViewController.swift in Sources */,
 				691B99E92123467D0099B30A /* ProfileViewController.swift in Sources */,
+				6941BAB521268589000E0352 /* LocalPushManager.swift in Sources */,
 				691B99F6212399160099B30A /* ScheduleTableViewCell.swift in Sources */,
 				691B99E221233AC10099B30A /* ViewControllersService.swift in Sources */,
 				691B99EB212359D40099B30A /* MedicalApoinmentViewController.swift in Sources */,
